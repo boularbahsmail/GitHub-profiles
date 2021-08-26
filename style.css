@@ -309,6 +309,10 @@ button:active {
     margin-bottom: 10px;
     justify-content: center;
   }
+
+  .card {
+    padding: 45px 20px;
+  }
 }
 }
 
