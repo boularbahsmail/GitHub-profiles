@@ -299,6 +299,16 @@ button:active {
   p {
     text-align: justify;
   }
+
+  .user-info ul {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+
+  .user-info ul li {
+    margin-bottom: 10px;
+    justify-content: center;
+  }
 }
 }
 
@@ -313,7 +323,8 @@ button:active {
 
   .user-info ul {
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 1fr 2fr;
+    background-color: gold;
   }
 
   .user-info ul li {
