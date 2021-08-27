@@ -65,9 +65,9 @@ body {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  border: 2px solid transparent;
+  border: 2px solid #eee;
   border-top-color: rgb(44, 61, 108);
-  animation: loading 0.2s linear infinite;
+  animation: loading 0.3s linear infinite;
 }
 
 #main {

@@ -4,15 +4,30 @@ const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 let copyright = document.querySelector(".copyright");
+// Checking function
+const showLoader = () => {
+    document.getElementById("main").style.display = "none";
+    document.querySelector(".load").style.display = "block";
+}
 
+const submitSuccess = () => {
+  document.getElementById("main").style.display = "block";
+  document.querySelector(".load").style.display = "none";
+}
+
+const submitFailed = () => {
+    alert("Failed to load !");
+}
 let date = new Date(),
     year = date.getFullYear();
 
 copyright.innerHTML = `&copy; ${year} Boularbah Ismail`;
 
 const getUser = async (username) => {
+    showLoader();
     const resp = await fetch(apiUrl + username);
     const respData = await resp.json();
+    submitSuccess();
     // Create User Card Component
     createUserCard(respData);
     // Get github profile repositories
@@ -77,10 +92,10 @@ const addReposToCard = (repos) => {
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
+    showLoader();
     const user = search.value;
-    const loader = document.querySelector(".load");
-    const main = document.getElementById("main");
     if (user) {
+      submitSuccess();
       getUser(user);
       search.value = "";
     } else {
