@@ -3,7 +3,7 @@ const resourcesToPrecache = [
     '/',
     'index.html',
     'assets/css/style.css',
-    'assets/js/script.css',
+    'assets/js/script.js',
     'assets/images/logo.png'
 ];
 
