@@ -1,0 +1,20 @@
+{
+    "short_name": "GitHub Profiles",
+    "name": "GitHub Profiles",
+    "icons": [
+        {
+            "src": "img/icon.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "img/icon.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        }
+    ],
+    "start_url": "index.html",
+    "background_color": "#fff",
+    "display": "standalone",
+    "theme_color": "#fff"
+}

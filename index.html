@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>GitHub Profiles</title>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="icon" type="x-icon" href="assets/images/logo.png" />
     </head>
     <body>
 	      <h2>Search a GitHub User</h2>
@@ -17,6 +18,17 @@
         </div>
         <main id="main"></main>
         <h5 class="copyright"></h5>
-        <script src="script.js" defer></script>
+        <script src="assets/js/script.js" defer></script>
+        <script>
+          // service worker supported by browser
+          if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('serviceWorker.js')
+              .then(reg => {
+                console.log("Registered!", reg);
+              }).catch(err => {
+                console.log("Regestration failed!", err);
+              })
+          };
+    </script>
     </body>
 </html>
