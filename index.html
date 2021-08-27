@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>GitHub Profiles</title>
         <link rel="stylesheet" href="style.css" />
-        <script src="script.js" defer></script>
     </head>
     <body>
 	      <h2>Search a GitHub User</h2>
@@ -13,7 +12,11 @@
             <input type="text" id="search" placeholder="Search by username" autocomplete="off" />
             <button title="Search">Search</button>
         </form>
+        <div class="load" title="Loading..">
+          <div class="loader"></div>
+        </div>
         <main id="main"></main>
         <h5 class="copyright"></h5>
+        <script src="script.js" defer></script>
     </body>
 </html>

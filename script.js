@@ -33,13 +33,14 @@ const createUserCard = (user) => {
         <div class="card">
           <div class="user-card">
             <div class="user-img">
-                <img class="avatar" src="${user.avatar_url}" alt="${user.name}" />
-                <div class="point">
+                <img class="avatar" src="${user.avatar_url}" alt="${user.name}" title="${user.name}"/>
+                <div class="point" title="Pulse">
                   <div class="mini-point"></div>
                 </div>
             </div>
             <div class="user-info">
                 <h2 class="User-name">${user.name}</h2>
+                <h4>@${user.login}</h4>
                 <p>${user.bio}</p>
                 <ul class="info">
                     <li>${user.followers}<strong>Followers</strong></li>
@@ -77,9 +78,11 @@ const addReposToCard = (repos) => {
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const user = search.value;
+    const loader = document.querySelector(".load");
+    const main = document.getElementById("main");
     if (user) {
-        getUser(user);
-        search.value = "";
+      getUser(user);
+      search.value = "";
     } else {
       alert('Username is a required field !!');
     }
