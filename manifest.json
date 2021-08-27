@@ -3,12 +3,12 @@
     "name": "GitHub Profiles",
     "icons": [
         {
-            "src": "img/icon.png",
-            "type": "image/png",
+            "src": "assets/images/logo.png",
+            "type": "assets/images/logo.png",
             "sizes": "144x144"
         },
         {
-            "src": "img/icon.png",
+            "src": "assets/images/logo.png",
             "type": "image/png",
             "sizes": "144x144"
         }
