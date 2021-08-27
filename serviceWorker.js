@@ -1,4 +1,4 @@
-const cacheName = 'cache-v1';
+const cacheName = 'cache-v0';
 const resourcesToPrecache = [
     '/',
     'index.html',
@@ -12,7 +12,7 @@ const resourcesToPrecache = [
 self.addEventListener('install', event => {
     console.log('Service worker install event!');
     event.waitUntil(
-        caches.open('cache-v1')
+        caches.open('cache-v0')
             .then(cache => {
                 // Static files the make up the applicaiton shell are cached
                 return cache.addAll(resourcesToPrecache);
